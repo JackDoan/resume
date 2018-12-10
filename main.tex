@@ -1,35 +1,21 @@
-\documentclass[11pt,english]{article}
+\documentclass[11pt]{article}
 \usepackage[letterpaper,bindingoffset=0.2in,%
-            left=0.3in,right=0.3in,top=0.4in,bottom=0.4in,%
+            left=0.2in,right=0.3in,top=0.4in,bottom=0.4in,%
+            %left=1.25in,right=1.25in,top=1.25in,bottom=1.25in,%
             footskip=.25in]{geometry}
-%\documentclass[letterpaper,11pt]{article}
-%\pagestyle{empty}
 \usepackage[svgnames]{xcolor}
 \usepackage{enumerate}
 \usepackage{framed}
-\usepackage{hyperref}
+%\usepackage{hyperref}
 \usepackage{tocloft}
 \usepackage{enumitem}
 \setlist{nosep}
 \setlength{\parindent}{0in}
 
-        %\setlength{\itemsep}{0pt}
-
-
 \begin{document}
-\textbf{\Large Jack Doan}
-\hfill
-214-436-6105\\
-2800 Waterview Pkwy, Apt 6231
-\hfill
-hello@jackdoan.com \\
-Richardson, TX 75080
-\hfill
-jackdoan.com \\
-\textcolor[RGB]{220,220,220}{\rule{\linewidth}{0.2pt}}
-
-\vspace{0.5em}
-\textbf{Summary:} Computer Engineer with leadership experience and academic training at the University of Texas at Dallas. Proven skills in circuit design, research, and system integration, with a strong background in both embedded systems and electric motor control.
+\thispagestyle{empty}
+\input{header.tex}
+\textbf{Summary:} Computer Engineer with leadership experience and academic training at the University of Texas at Dallas. Proven skills in circuit design, research, and system integration, with a strong background in both embedded systems and robotics. Excited about solving problems and learning new things in the process.
 
 \vspace{0.75em}
 \textbf{Education:} The University of Texas at Dallas, B.S. Computer Engineering, May 2018
@@ -39,52 +25,49 @@ Coursework: Computer Architecture, Real Time Operating Systems, Signals \& Syste
 
 \vspace{0.75em}
 \textbf{Engineering Projects and Experience:}\\
+\input{senior_design.tex}
 Student Researcher at the Locomotor Control Systems Laboratory
-\hfill
+\hfill %%%mention that I get paid a "lot"
 April 2015 - Current
 \begin{itemize}
+    \item Mentor for Undergraduate Interns:
+    \begin{itemize}
+        %\item Provided guidance and leadership to a team of three interns
+        \item Demonstrated how to use classroom knowledge in order to achieve the lab's research goals
+        \item Collaborated with three interns to refine high-level designs into buildable, reliable prototypes
+        \item Outlined requirements and provided constructive criticism
+    \end{itemize}
     \item Control Strategy Implementation:
     \begin{itemize}
-        \item Worked with PhD candidates to get their control strategies off of the whiteboard and into reality
+        \item Worked with PhD candidates to prototype cutting-edge research devices
         \item Transformed scientific literature into precise, testable software requirements
-        \item Used Agile methodologies to develop software quickly, while ensuring the user’s needs were met
+        \item Used Agile methodologies to develop software quickly, while ensuring the user\textsc{\char13}s needs were met
         \item Documented code to allow non-programmers to understand and tweak it
         \item Successfully tripled system performance by overhauling legacy code to meet modern standards
     \end{itemize}
-    \item Comet Exoskeleton:
+    \item Powered Lower-Limb Exoskeleton:
     \begin{itemize}
-        \item The Comet Exoskeleton is a powered lower-leg orthotic device that helps its wearer walk
-        \item Designed to facilitate rehabilitation of stroke patients who need to learn to walk again
-        \item Capable of fully tracking the user’s gait cycle and applying the up to 40\% body weight support
-        \item Implemented control laws, wrote device drivers and designed printed circuit boards
-        \item Operated the device \& monitored sensor data for safety during human subject experiments
+        %\item The Comet Exoskeleton is a powered lower-leg orthotic device that helps its wearer walk
+        \item Designed and built the electrical subsystems that facilitate locomotor rehabilitation of stroke patients %HELP FIX THIS
+        \item Wrote software to track the user’s gait cycle and apply the up to 40\% body weight support
+        \item Implemented control laws, wrote device drivers, and designed printed circuit boards
+        \item Operated the device and monitored sensor data for safety during human subject experiments
     \end{itemize}
 \end{itemize}
 \vspace{0.5em}
-Electrical Team Leader for UTD Combat Robotics
-\hfill
-October 2014 - May 2017
-\begin{itemize}
-    \item Designed, built and competed with UTD’s flagship combat robot: The Blender
-    \item Built with a titanium shell, 9000 Watts of electric motors, and four steel teeth spinning at over 100 mph
-    \item Designed custom motor controllers, which save the team an average of \$200 per round of combat
-    \item Led the team to a smashing success in 2015, with a 3rd place finish at the international RoboGames
-\end{itemize}
+\input{battlebots.tex}
 \vspace{0.5em}
 
-\textbf{Publications:}
-\begin{itemize}
-    \item H. Zhu, \textbf{J. Doan}, C. Stence, G. Lv, T. Elery, R. Gregg, `Design and validation of a torque dense, highly backdrivable powered knee-ankle orthosis' \textit{IEEE Int. Conf. Robotics and Automation}, 2017.
-\item T. Elery, S. Rezazadeh, C. Nesler, \textbf{J. Doan}, H. Zhu, R. Gregg, `Design and benchtop validation of a powered knee-ankle prosthesis with high-torque, low-impedance actuators' \textit{Submitted: IEEE Int. Conf. Robotics and Automation}, 2018.\\
-\end{itemize}
 
-\begin{tabular}{@{}l l l l l l}
-    \textbf{Technical} & C/C++ & LabVIEW & DSP  & Verilog & Embedded Systems \\
-    \textbf{Skills}    & KiCAD & Linux   & Java & Python  & Motor Control \\
-                       & Altium & Git & RTOS & Battery Management & Communication Protocols \\
-                       & AVR & ARM & MSP430 & C2000 & Use of Test Equipment\\
+\input{publications.tex}
+\vspace{0.75em}
+\begin{tabular}{@{}l l l l l l l}
+    \textbf{Technical} & C/C++ & Java & Python & Verilog & Computer Vision & Embedded Systems \\
+    \textbf{Skills}    & KiCAD & Altium & LabVIEW & MATLAB & PCB Design & SMD Soldering \\
+                       & Linux & Git & RTOS & DSP & Motor Control & Power Electronics \\
+                       & ARM & AVR & MSP430 & C2000 & Serial Communication & Use of Test Equipment\\
 \end{tabular}
 
-\vspace{0.5em}
+\vspace{0.75em}
 \textbf{Availability:} Full time: May 2018. US Citizen. Willing to relocate.
 \end{document}
