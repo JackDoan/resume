@@ -1,2 +1,4 @@
-pdflatex main.tex
+pdflatex main.tex && google-chrome-stable main.pdf
+echo upload?
+read
 scp main.pdf jackdoan.com:~/github/jackdoan.com/assets/pdf/JackDoanResume.pdf

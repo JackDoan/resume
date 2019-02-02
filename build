@@ -1,0 +1,1 @@
+pdflatex main.tex && google-chrome-stable main.pdf
