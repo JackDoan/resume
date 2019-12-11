@@ -1,4 +1,13 @@
 pdflatex main.tex && google-chrome-stable main.pdf
 echo upload?
 read
-scp main.pdf jackdoan.com:~/github/jackdoan.com/assets/pdf/JackDoanResume.pdf
+cp main.pdf ~/git/jackdoan.com/assets/pdf/JackDoanResume.pdf
+cd ~/git/jackdoan.com
+git add assets/pdf/JackDoanResume.pdf
+git commit -m 'update resume'
+git push
+cd -
+cd ~/git/ansible
+./reconfig.sh
+cd -
+#scp main.pdf jackdoan.com:/var/www/jackdoan.com/assets/pdf/JackDoanResume.pdf
